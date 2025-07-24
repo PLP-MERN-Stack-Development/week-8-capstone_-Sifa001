@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+:root {
+  --bg-color: theme('colors.bg.light');
+  --surface-color: theme('colors.surface.light');
+  --card-color: theme('colors.card.light');
+  --text-primary: theme('colors.text.primary.light');
+  --text-secondary: theme('colors.text.secondary.light');
+  --border-color: theme('colors.border.light');
+  --primary: theme('colors.primary.light');
+}
+
+.dark {
+  --bg-color: theme('colors.bg.dark');
+  --surface-color: theme('colors.surface.dark');
+  --card-color: theme('colors.card.dark');
+  --text-primary: theme('colors.text.primary.dark');
+  --text-secondary: theme('colors.text.secondary.dark');
+  --border-color: theme('colors.border.dark');
+  --primary: theme('colors.primary.dark');
+}
+
+/* Base styles */
+@layer base {
+  /* Base element styles */
+  body {
+    @apply bg-theme-bg text-theme-text min-h-screen transition-colors duration-200;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-theme-text font-semibold;
+  }
+  
+  p, span, div, li, td, th, label {
+    @apply text-theme-text text-base;
+  }
+  
+  /* Form elements */
+  input, textarea, select {
+    @apply bg-theme-surface border border-theme-border rounded-md p-2 w-full
+           focus:ring-2 focus:ring-primary focus:border-transparent
+           transition-colors duration-200;
+  }
+  
+  /* Buttons */
+  button, .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200
+           bg-primary text-white hover:opacity-90 focus:outline-none focus:ring-2 
+           focus:ring-offset-2 focus:ring-primary;
+  }
+  
+  /* Cards and containers */
+  .card, .container, .panel, .box, .section {
+    @apply bg-theme-card rounded-lg shadow-sm p-6 transition-colors duration-200;
+  }
+  
+  /* Navigation */
+  nav, .nav {
+    @apply bg-theme-surface shadow-sm transition-colors duration-200;
+  }
+  
+  /* Tables */
+  table {
+    @apply w-full border-collapse;
+    th, td {
+      @apply border border-theme-border p-3 text-left;
+    }
+    thead {
+      @apply bg-theme-surface;
+      th {
+        @apply font-semibold text-theme-text;
+      }
+    }
+    tbody tr {
+      @apply bg-theme-card hover:bg-opacity-70 transition-colors duration-150;
+    }
+  }
+  
+  /* Custom utility classes */
+  .content-container {
+    @apply bg-theme-card rounded-lg shadow-sm p-6 my-4 transition-colors duration-200;
+  }
+  
+  .sidebar {
+    @apply bg-theme-surface border-r border-theme-border p-4 transition-colors duration-200;
+  }
+  
+  /* Text utilities */
+  .text-muted {
+    @apply text-theme-text-secondary;
+  }
+}
