@@ -67,8 +67,8 @@ cd ../client
 npm run dev
 ```
 
-- The frontend will run on [http://localhost:5173](http://localhost:5173)
-- The backend will run on [http://localhost:5000](http://localhost:5000)
+- The frontend will run on [https://safariapp-git-main-vivian-sifas-projects.vercel.app/]
+- The backend will run on [https://week-8-capstone-sifa001.onrender.com]
 
 ---
 
