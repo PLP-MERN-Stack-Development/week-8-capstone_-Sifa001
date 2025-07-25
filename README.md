@@ -67,7 +67,7 @@ cd ../client
 npm run dev
 ```
 
-- The frontend will run on [https://safariapp.vercel.app/]
+- The frontend will run on [https://safaritrack.vercel.app/]
 - The backend will run on [https://week-8-capstone-sifa001.onrender.com]
 
 ---
