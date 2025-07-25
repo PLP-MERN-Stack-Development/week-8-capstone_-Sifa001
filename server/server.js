@@ -40,7 +40,7 @@ connectDB();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: [process.env.CLIENT_URL, 'http://localhost:5173'], // Allow both deployed and local frontends
   credentials: true
 }));
 
@@ -169,10 +169,8 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV}`);
 });
 
 module.exports = app;
